@@ -2,12 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
+    <title>Mi Dulce Mundo</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header></header>
-    <main></main>
+    <main>
+
+      <!--Solicitar el número de la tarjeta de crédito-->
+      <form action = "">
+        <label for = "inputCreditCard">Número de tarjeta de crédito</label>
+        <input  type="text"
+        id = "inputCreditCard"
+        placeholder="1234 5678 9012 3456"
+        name = "inputCreditCard"
+        pattern= "[0-9]{1,16}"
+        required
+        />
+        <button type = "button" id= "Validar" >Validar</button>
+      </form>
+        
+      
+    </main>
     <footer></footer>
     <script src="index.js" type="module"></script>
   </body>
