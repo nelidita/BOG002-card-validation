@@ -1,0 +1,88 @@
+ /*Colocando color de fondo y tipos de letras para toda la página*/
+body {
+    background-color: whitesmoke;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+/*Logotipo en el encabezado*/
+ .logo {
+     float: left;
+     display: block;
+     text-align: left;
+     width: 250px;
+     height: 117.97px;
+     text-decoration: none;
+     margin-right: 50px;
+}
+ 
+/*Barra de menú horizontal*/
+    /*Haciendo que no se vean las viñetas en los botones de menú*/
+nav ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+}
+    /*Que el menú este situado en la parte derecha de la pagina*/
+nav li {
+    float: right;
+    
+}
+    /*Dando estilo a los botones del menú*/
+nav li a {
+     display: block;
+     color: #61434f;
+     text-align: center;
+     padding: 16px 16px ;
+     text-decoration: none;
+     transition: .3s;
+     line-height: 1rem;
+}
+
+    /*Hacer que cuando el maouse este encima de uno de los botones de menú cambie de color tanto el fondo como de la letra.*/
+nav li a:hover{
+     background-color: #b98c9e;
+     color: white;
+ }
+
+    /*Colocando un color de fondo al botón de la página donde se encuentre actualmente el usuario.*/
+.active {
+    background-color: #b98c9e;
+}
+ 
+
+/*Style Fooder*/
+footer{
+    list-style-type: none;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+	padding-bottom: 4px;
+	text-align: center;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+footer li{
+    display: inline;
+    
+    margin: 0;
+    padding: 0;
+}
+
+footer li a{
+    display: inline-table;
+    text-decoration: none;
+    color: #44333a;
+    transition: .2s ease-in;
+    text-align: center;  
+    padding: 18px 18px;
+    line-height: 2rem;
+}
+
+    
+

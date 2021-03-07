@@ -1,30 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Mi Dulce Mundo</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header></header>
-    <main>
 
-      <!--Solicitar el número de la tarjeta de crédito-->
-      <form action = "">
-        <label for = "inputCreditCard">Número de tarjeta de crédito</label>
-        <input  type="text"
-        id = "inputCreditCard"
-        placeholder="0000 0000 0000 0000"
-        name = "inputCreditCard"
-        pattern= "[0-9]{1,16}"
-        required
-        />
-        <button type = "button" id= "Validar" >Validar</button>
+<head>
+  <meta charset="utf-8">
+  <title>Mi Dulce Mundo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="Logo,jpg" alt="Logo Mi Dulce Mundo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="Contáctenos.html"> Contáctenos</a></li>
+        <li><a href="Postres.html"> Postres</a></li>
+        <li><a href="Pasteles.html"> Pasteles</a></li>
+        <li class="actual"><a href="index.html"> Inicio</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+
+    <!--Solicitar el número de la tarjeta de crédito-->
+    <div>
+      <form action="">
+        <label for="inputCreditCard">Número de tarjeta de crédito</label>
+        <input type="text" id="inputCreditCard" placeholder="0000 0000 0000 0000" name="inputCreditCard"
+          pattern="[0-9]{1,16}" required />
+        <button type="button" id="Validar">Validar</button>
       </form>
-        
-      
-    </main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
-  </body>
+    </div>
+
+
+  </main>
+  <footer>
+    <ul class="Redes Sociales">
+      <li><a href="#"><img src="/src/Imagenes/facebook.jpg" alt="Mi Dulce Mundo"></a></li>
+      <li><a href="#"><img src="/src/Imagenes/instagrameste.png" alt="@midulcemundo"></a></li>
+      <li><a href="#"><img src="/src/Imagenes/email.jpg" alt="midulcemundo@gmail.com"></a></li>
+      <li><a href="#"><img src="/src/Imagenes/tarjetas de crédito.jpg" alt="Facilidades de pago"></a></li>
+    </ul>
+  </footer>
+  <script src="index.js" type="module"></script>
+</body>
+
 </html>
