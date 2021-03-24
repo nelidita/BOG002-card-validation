@@ -4,16 +4,18 @@
 <head>
   <meta charset="utf-8">
   <title>Mi Dulce Mundo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <!--Encabezado, donde va el logo y la barra de menú-->
   <header class="header">
     <div class="logo">
-      <img src="Logo,jpg" alt="Logo Mi Dulce Mundo">
+      <img src="Imagenes/Logo.png" alt="Logo Mi Dulce Mundo">
     </div>
     <nav>
-      <ul>
+      <ul class="menu">
         <li><a href="Contáctenos.html"> Contáctenos</a></li>
         <li><a href="Postres.html"> Postres</a></li>
         <li><a href="Pasteles.html"> Pasteles</a></li>
@@ -21,27 +23,96 @@
       </ul>
     </nav>
   </header>
-  <main>
+  <main class="container">
 
-    <!--Solicitar el número de la tarjeta de crédito-->
-    <div>
-      <form action="">
-        <label for="inputCreditCard">Número de tarjeta de crédito</label>
-        <input type="text" id="inputCreditCard" placeholder="0000 0000 0000 0000" name="inputCreditCard"
-          pattern="[0-9]{1,16}" required />
-        <button type="button" id="Validar">Validar</button>
-      </form>
+    <!--Página de Inicio-->
+    <div class="containerInicio" id="containerInicio">
+      <div class="imagenInicio">
+        <img id="imgPostreinicio" src="Imagenes/postreinicio.jpg" alt="Postres">
+        <button type="button" id="botonPostres" onclick="llamandoPaginaPostres()">Postres</button>
+      </div>
+      <div class="imagenInicio">
+        <img id="imgPastelInicio" src="Imagenes/pastelinicio.jpg" alt="Pasteles">
+        <button type="button" id="botonPasteles">Pasteles</button>
+      </div>
+    </div>
+    <!--Páginas de Selección de Productos-->
+
+    <div class="seleccionProductos">
+
+      <!--Página de selección de Postres-->
+      <div class="seleccionPostres" id="seleccionPostres">
+        <h1>Postres</h1>
+
+        <section class="containerProducto" id="brownie">
+          <img id="postre1" src="Imagenes/postre1.jpg" alt="Brownie">
+          <p id="descripcionBrownie">Brownie<br>6 porciones<br>20.000 $</p>
+          <button type="button" id="comprarBrownie">Comprar</button>
+        </section>
+        <div class="containerProducto">
+          <img id="postre2" src="Imagenes/postre2.jpg" alt="Pie de Limón">
+          <p id="descripcionPie">Pie de Limón<br>12 porciones<br>30.000 $</p>
+          <button type="button" id="comprarPie">Comprar</button>
+        </div>
+        <div class="containerProducto">
+          <img id="postre3" src="Imagenes/postre3.jpg" alt="Roll de canela">
+          <p id="descripcionRoll">Roll de Canela<br>6 Unidades<br>15.000 $</p>
+          <button type="button" id="comprarRoll">Comprar</button>
+        </div>
+      </div>
+
+      <!--Página de selección de Pasteles-->
+      <div class="seleccionPasteles" id="seleccionPasteles">
+        <h1>Pasteles</h1>
+        <div class="containerProducto">
+          <img id="pastel1" src="Imagenes/Pastel1.jpg" alt="Happy">
+          <p id="descripcionPastel1">Happy<br>10 porciones<br>50.000 $</p>
+          <button type="button" id="comprarPastel1">Comprar</button>
+        </div>
+        <div class="containerProducto">
+          <img id="pastel2" src="Imagenes/pastel 2.jpg" alt="Majestic">
+          <p id="descripcionPastel2">Majestic<br>20 porciones<br>90.000 $</p>
+          <button type="button" id="comprarPastel2">Comprar</button>
+        </div>
+        <div class="containerProducto">
+          <img id="pastel3" src="Imagenes/pastel3.jpg" alt="Conos party">
+          <p id="descripcionPastel3">Conos Party<br>15 Unidades<br>70.000 $</p>
+          <button type="button" id="comprarPastel3">Comprar</button>
+        </div>
+      </div>
     </div>
 
-
+    <!--Form de pago-->
+    <div class="formPago" id="formPago">
+      <form action="">
+        <label for="nombre">Nombre y Apellido</label>
+        <input type="text" class="item" id="nombre" placeholder="María Pérez" pattern="[a-z,A-Z]{1,20}" required>
+        <label for="tipoDocumento">Tipo de Documento</label>
+        <select name="tipoDocumento" class="item" id="tipoDocumento" required>
+          <option value="cedulaCiudadania">Cédula de Ciudadanía</option>
+          <option value="cedulaExranjeria">Cédula de Extranjería</option>
+          <option value="permisoEspecialPermanencia">Permiso Especial de Permanencia</option>
+          <option value="pasaporte">Pasaporte</option>
+        </select>
+        <label for="numeroDocumento">Nro. de Documento</label>
+        <input type="text" class="item" placeholder="123456789" pattern="[0-9]{1,16}" required>
+        <label for="inputCreditCard">Nro. de tarjeta de crédito</label>
+        <input type="text" class="item" id="inputCreditCard" placeholder="0000 0000 0000 0000" name="inputCreditCard"
+          pattern="[0-9]{1,16}" required />
+        <label for="fechaVencimiento">Fecha de Vencimiento</label>
+        <input type="month" name="fechaVencimiento" class="item" id="fechaVencimiento" value="2021-01" required>
+        <label for="numeroTelefono">Nro. de Teléfono</label>
+        <input type="text" class="item" id="numeroTelefono" placeholder="000 000 00 00" pattern="[0-9]{1,10}" required>
+        <button type="button" id="Validar">Validar <br> Tarjeta de Crédito</button>
+        <button type="button" id="Pagar">Pagar</button>
+      </form>
+    </div>
   </main>
   <footer>
-    <ul class="Redes Sociales">
-      <li><a href="#"><img src="/src/Imagenes/facebook.jpg" alt="Mi Dulce Mundo"></a></li>
-      <li><a href="#"><img src="/src/Imagenes/instagrameste.png" alt="@midulcemundo"></a></li>
-      <li><a href="#"><img src="/src/Imagenes/email.jpg" alt="midulcemundo@gmail.com"></a></li>
-      <li><a href="#"><img src="/src/Imagenes/tarjetas de crédito.jpg" alt="Facilidades de pago"></a></li>
-    </ul>
+    <div class="redesSociales">
+      <img id="imgRedes" src="imagenes/redes.jpg" alt="">
+      <p class="footercopyright">Sitio Web creado por &copy;Nélida Valero</p>
+    </div>
   </footer>
   <script src="index.js" type="module"></script>
 </body>

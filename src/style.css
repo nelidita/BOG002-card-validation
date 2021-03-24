@@ -1,45 +1,52 @@
- /*Colocando color de fondo y tipos de letras para toda la página*/
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/*Colocando color de fondo y tipos de letras para toda la página*/
 body {
-    background-color: whitesmoke;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    background-color: white;
+    font-family: 'Sulphur Point', sans-serif;
+}
+/*style header*/
+.header{
+    height: 80px;
+    position: inherit;
+    width: -webkit-fill-available;
+    /* background: white; */
 }
 
 /*Logotipo en el encabezado*/
- .logo {
-     float: left;
+.logo {
      display: block;
-     text-align: left;
-     width: 250px;
-     height: 117.97px;
-     text-decoration: none;
-     margin-right: 50px;
+     float: left;
+     padding: 10px;
+}
+.logo img{
+     width: 130px;
+     height: 60px;
 }
  
 /*Barra de menú horizontal*/
-    /*Haciendo que no se vean las viñetas en los botones de menú*/
-nav ul {
+    /*Haciendo que no se vean las viñetas en el menú y este situado en la parte derecha de la pagina*/
+.menu li {
      list-style-type: none;
-     margin: 0;
-     padding: 0;
+     float: right;
 }
-    /*Que el menú este situado en la parte derecha de la pagina*/
-nav li {
-    float: right;
-    
-}
+  
     /*Dando estilo a los botones del menú*/
-nav li a {
-     display: block;
+.menu li a {
+     display: inline-block;
      color: #61434f;
-     text-align: center;
-     padding: 16px 16px ;
+     padding: 20px 30px;
      text-decoration: none;
-     transition: .3s;
-     line-height: 1rem;
+     transition: .5s;
+     line-height: 2rem;
 }
 
     /*Hacer que cuando el maouse este encima de uno de los botones de menú cambie de color tanto el fondo como de la letra.*/
-nav li a:hover{
+.menu li a:hover{
      background-color: #b98c9e;
      color: white;
  }
@@ -48,41 +55,136 @@ nav li a:hover{
 .active {
     background-color: #b98c9e;
 }
- 
+
+    /*Style Container de Inicio*/
+.containerInicio{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 70vw;
+    margin-bottom: 20px;
+}
+.imagenInicio {
+    padding: 10px;
+    border: solid 2px #bb9ca8;
+    border-radius: 10px;
+    margin-top: 45px;
+}
+
+    /*Style imagenes de inicio*/
+.imagenInicio img{
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+    /*Style botones de Inicio*/
+.imagenInicio button{
+    display: block;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    width: 200px;
+    height: 55px;
+    font-size: 25px;
+    font-family:inherit;
+    margin-left: 75px;
+    margin-top: 30px;
+}
+
+/*Style Páginas de selección de producto*/
+.seleccionProductos{
+    width: 90vw;
+    margin: auto;
+    text-align: center;
+}
+.seleccionProductos h1{
+    text-align: center;
+    color: #61434f;
+    margin-top: 0px;
+}
+    /*Style Contenedor de productos*/
+.seleccionProductos p{
+    text-align: center;
+}
+.containerProducto{
+    display:inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: solid 2px #bb9ca8;
+    border-radius: 10px;
+}
+.containerProducto img{
+    width: 300px;
+    height: 280px;
+    border-radius: 10px;
+}
+.containerProducto button{
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    width: 200px;
+    height: 55px;
+    font-size: 25px;
+    font-family:inherit; 
+}
+
+/*Style form de pago*/
+.formPago{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.formPago form{
+    display: inline-grid;
+    border: solid 2px #bb9ca8;
+    border-radius: 10px;
+    grid-template-columns: 220px 230px;
+    font-size: 18px;
+    width: 35vw;
+    height: 300px;
+    padding: 10px;
+    margin: 20px;
+    justify-content: center;
+}
+.item {
+    border: solid 2px #bb9ca8;
+    border-radius: 10px;
+}
+.formPago button{
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    width: 200px;
+    height: 65px;
+    font-size: 25px;
+    font-family:inherit; 
+    margin-top: 30px;
+}
+#Validar{
+    font-size: 20px;
+}
+#textInvalida{
+    display: block;
+    color: black;
+    width: 300px;
+    height: 100px;
+}
 
 /*Style Fooder*/
 footer{
-    list-style-type: none;
-    bottom: 0;
-    left: 0;
     position: absolute;
-    right: 0;
-    overflow: hidden;
-	padding-bottom: 4px;
-	text-align: center;
+    text-align: center;
+    height: 65px;
+    width: -webkit-fill-available;
+    bottom: auto;
 }
-
-footer ul {
-    margin: 0;
-    padding: 0;
+.redesSociales img{
+    width: 140px;
+    height: 40px;
 }
-
-footer li{
-    display: inline;
-    
-    margin: 0;
-    padding: 0;
+.redesSociales p{
+    color: #61434f;
+    font-size: 14px;
 }
-
-footer li a{
-    display: inline-table;
-    text-decoration: none;
-    color: #44333a;
-    transition: .2s ease-in;
-    text-align: center;  
-    padding: 18px 18px;
-    line-height: 2rem;
-}
-
-    
-
